@@ -17,7 +17,7 @@
                 
         <table>
             <tr>
-                <th>ID</th>
+                <th>number</th>
                 <th>FIRSTNAME</th>
                 <th>LASTNAME</th>
                 <th>COURSE</th>
