@@ -1,0 +1,70 @@
+
+body{
+    background-color: #a39f9f;
+    font-family: 'Bebas Neue';
+}
+form{
+    background-color: #7e7474;
+    color: #8b8787;
+    margin: 10px auto;
+    padding: 15px;
+    text-align: center;
+    width: 250px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px 0px #aa3333;
+}
+table{
+    background-color: #ffffff;
+    color: #dd6666;
+    padding: 15px;
+    margin: 10px auto;
+    width: 80%;
+    border-collapse: collapse;
+    box-shadow: 2px 2px 5px 0px #aa3333;
+}
+label{
+    display: block;
+    margin-top: 10px;
+}
+input{
+    display: block;
+    width: 200px;
+    padding:.5em;
+    margin: 0px auto;
+    border: solid .05em #dd6666;
+    border-radius: 5px;
+}
+input[type='Submit']{
+    background-color: #ee5555;
+    border: none;
+    color: #ffeeee;  
+    margin: 1em;
+    padding: .5em;
+    width: 220px;
+}
+input[type='Submit']:hover{
+    background-color: #aa3333;
+}
+tr:nth-child(even){
+    background-color: #ee5555;
+    color: #ffcccc;
+}
+td{
+    border: none;
+    margin: 0px;
+    padding: .5em;
+}
+th{
+    padding: .5em;
+}
+.btn{
+    background-color: #ffcccc;
+    color: #aa3333;
+    padding: .3em;
+    margin: .1em;
+   
+}
+.btn:hover{
+    background-color: #f3a3a3;
+    color: #b3acac;
+}
