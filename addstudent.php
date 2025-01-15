@@ -1,10 +1,10 @@
 <?php
-    $fn = $_GET['fname'];
-    $ln = $_GET['lname'];
-    $crs = $_GET['course'];
-    $yr = $_GET['year'];
+    $fn = $_GET['System unit parts'];
+    $ln = $_GET['Monitor'];
+    $crs = $_GET['Accessories'];
+    $yr = $_GET['Quantity'];
        
-    echo $fn." ".$ln." course:".$crs." ".$yr;
+    echo $fn." ".$ln." Quantity:".$crs." ".$yr;
     
     $connection = mysqli_connect("localhost","root","","sisdb_ugbinada");
            

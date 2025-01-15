@@ -1,7 +1,7 @@
 <?php
 
 $sid = $_POST['sid'];
-$fname = $_POST['ftname'];
+$fname = $_POST['fname'];
 $lname = $_POST['lname'];
 $crs = $_POST['course'];
 $yr = $_POST['year'];
