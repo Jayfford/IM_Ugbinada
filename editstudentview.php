@@ -10,7 +10,7 @@
 <?php
     $sid=$_GET['sid'];
     
-     $connection = mysqli_connect("localhost","root","","sisdb_ugbinada");        
+     $connection = mysqli_connect("localhost","root","","si`sdb_ugbinada");        
      $sql = "SELECT * FROM student WHERE sid=$sid";
      $result = $connection->query($sql);
      $row = mysqli_fetch_assoc($result)

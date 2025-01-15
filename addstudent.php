@@ -1,8 +1,8 @@
 <?php
-    $fn = $_GET['System unit parts'];
-    $ln = $_GET['Monitor'];
-    $crs = $_GET['Accessories'];
-    $yr = $_GET['Quantity'];
+    $fn = $_POST['System-unit-parts'];
+    $ln = $_POST['Monitor'];
+    $crs = $_POST['Accessories'];
+    $yr = $_POST['Quantity'];
        
     echo $fn." ".$ln." Quantity:".$crs." ".$yr;
     

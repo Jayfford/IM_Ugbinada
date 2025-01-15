@@ -1,24 +1,23 @@
 <!DOCTYPE html>
-
 <html>
     <head>
         <meta charset="UTF-8">
-        <title></title>
+        <title>Student Management</title>
         <link href="style.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <form action="addstudent.php">
-            <input type="text" id="System unit parts" placeholder="System unit parts" name="System unit parts">
-            <input type="text" id="Monitor" placeholder="Monitor" name="Monitor">
-            <input type="text" id="Accessories" placeholder="Accessories" name="Accessories">
-            <input type="text" id="Quantity" placeholder="Quantity" name="Quantity">
-            <input type="submit" value="Add Order" name="add Order" />            
+        <form action="addstudent.php" method="post">
+            <input type="text" id="System-unit-parts" placeholder="System unit parts" name="System-unit-parts" required>
+            <input type="text" id="Monitor" placeholder="Monitor" name="Monitor" required>
+            <input type="text" id="Accessories" placeholder="Accessories" name="Accessories" required>
+            <input type="number" id="Quantity" placeholder="Quantity" name="Quantity" required>
+            <input type="submit" value="Add Order" name="addOrder" />            
         </form>
                 
         <table>
             <tr>
                 <th>Uid</th>
-                <th>System_unit_parts</th>
+                <th>System unit parts</th>
                 <th>Monitor</th>
                 <th>Accessories</th>
                 <th>Quantity</th>
@@ -28,23 +27,28 @@
         <?php
             $connection = mysqli_connect("localhost","root","","sisdb_ugbinada");
            
+            if ($connection === false) {
+                die("ERROR: Could not connect. " . mysqli_connect_error());
+            }
+
             $sql = "SELECT * FROM student";
-                   
             $result = $connection->query($sql);
             
-            while($row=mysqli_fetch_assoc($result)){
-                echo "<tr>";
-                echo "<td>".$row['Uid']."</td>";
-                echo "<td>".$row['System unit parts']."</td>";
-                echo "<td>".$row['Monitor']."</td>";
-                echo "<td>".$row['Accessories']."</td>";
-                echo "<td>".$row['Quantity']."</td>";
-                echo "<td>"
-                . "<a class=\"btn\" href=\"editstudentview.php?sid=".$row['sid']." \">Edit</a>"
-                . "<a class=\"btn\" href=\"deletestudent.php?sid=".$row['sid']." \" onclick=\"return confirm('Delete student?')\">Delete</a>"
-                . "</td>";
-                echo "</tr>";
+            if ($result->num_rows > 0) {
+                while($row = mysqli_fetch_assoc($result)){
+                    echo "<tr>";
+                    echo "<td>".$row['uid']."</td>";
+                    echo "<td>".$row['System-unit-parts']."</td>";
+                    echo "<td>".$row['Monitor']."</td>";
+                    echo "<td>".$row['Accessories']."</td>";
+                    echo "<td>".$row['Quantity']."</td>";
+                    echo "<td><a href='delete-order.php?sid=".$row['uid']."'>Delete</a></td>";
+                    echo "</tr>";
+                }
+            } else {
+                echo "<tr><td colspan='6'>No records found</td></tr>";
             }
+
             $connection->close();
         ?>
         </table>
