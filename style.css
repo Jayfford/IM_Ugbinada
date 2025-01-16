@@ -1,12 +1,15 @@
 
 body{
     
-   
+    background-image: url('./pictures/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     background-color: #ffffff;
     font-family: 'Bebas Neue';
 }
 form{
-    background-image: url('background2.jpg');
+    background-image: url('./pictures/background2.jpg');
     background-size: cover;
     color: #ffffff;
     margin: 10px auto;
@@ -14,16 +17,16 @@ form{
     text-align: center;
     width: 250px;
     border-radius: 5px;
-    box-shadow: 2px 2px 5px 0px #aa3333;
+    box-shadow: 2px 2px 5px 0px #6e6969;
 }
 table{
     background-color: #ffffff;
-    color: #fc0000;
+    color: #635f5f;
     padding: 15px;
     margin: 10px auto;
     width: 80%;
     border-collapse: collapse;
-    box-shadow: 2px 2px 5px 0px #b80505;
+    box-shadow: 2px 2px 5px 0px #686464;
 }
 label{
     display: block;
@@ -34,11 +37,11 @@ input{
     width: 200px;
     padding:.5em;
     margin: 0px auto;
-    border: solid .05em #c70606;
+    border: solid .05em #585656;
     border-radius: 5px;
 }
 input[type='Submit']{
-    background-color: #d80707;
+    background-color: #686464;
     border: none;
     color: #ffeeee;  
     margin: 1em;
@@ -46,11 +49,11 @@ input[type='Submit']{
     width: 220px;
 }
 input[type='Submit']:hover{
-    background-color: #aa3333;
+    background-color: #686464;
 }
 tr:nth-child(even){
-    background-color: #d80707;
-    color: #ffcccc;
+    background-color: #686464;
+    color: #b4adad;
 }
 td{
     border: none;
@@ -62,12 +65,12 @@ th{
 }
 .btn{
     background-color: #ffcccc;
-    color: #aa3333;
+    color: #686464;
     padding: .3em;
     margin: .1em;
    
 }
 .btn:hover{
-    background-color: #f3a3a3;
+    background-color: #686464;
     color: #b3acac;
 }

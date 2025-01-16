@@ -1,24 +1,23 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $fn = $_POST['System-unit-parts'];
-    $ln = $_POST['Monitor'];
+    $sid = $_POST['sid'];
+    $fname = $_POST['System-unit-parts'];
+    $lname = $_POST['Monitor'];
     $crs = $_POST['Accessories'];
     $yr = $_POST['Quantity'];
-       
-    echo $fn." ".$ln." Quantity:".$crs." ".$yr;
-    
-    $connection = mysqli_connect("localhost","root","","sisdb_ugbinada");
+
+    $connection = mysqli_connect("localhost", "root", "", "sisdb_ugbinada");
 
     if ($connection === false) {
         die("ERROR: Could not connect. " . mysqli_connect_error());
     }
-           
-    $sql = "INSERT INTO student (`System-unit-parts`, `Monitor`, `Accessories`, `Quantity`) VALUES (?, ?, ?, ?)";
+
+    $sql = "UPDATE student SET `System-unit-parts`=?, `Monitor`=?, `Accessories`=?, `Quantity`=? WHERE uid=?";
     $stmt = $connection->prepare($sql);
-    $stmt->bind_param("sssi", $fn, $ln, $crs, $yr);
+    $stmt->bind_param("sssii", $fname, $lname, $crs, $yr, $sid);
 
     if ($stmt->execute()) {
-        echo "Record added successfully.";
+        echo "Record updated successfully.";
     } else {
         echo "ERROR: Could not execute query: $sql. " . mysqli_error($connection);
     }

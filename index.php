@@ -2,21 +2,21 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Student Management</title>
+        <title>PC Builder</title>
         <link href="style.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <form action="addstudent.php" method="post">
-            <input type="text" id="System-unit-parts" placeholder="System unit parts" name="System-unit-parts" required>
+            <input type="text" id="System-unit-parts" placeholder="System unit parts" name="System unit parts" required>
             <input type="text" id="Monitor" placeholder="Monitor" name="Monitor" required>
             <input type="text" id="Accessories" placeholder="Accessories" name="Accessories" required>
             <input type="number" id="Quantity" placeholder="Quantity" name="Quantity" required>
             <input type="submit" value="Add Order" name="addOrder" />            
         </form>
-                
+    
         <table>
             <tr>
-                <th>Uid</th>
+                <th>Oid</th>
                 <th>System unit parts</th>
                 <th>Monitor</th>
                 <th>Accessories</th>
@@ -42,11 +42,12 @@
                     echo "<td>".$row['Monitor']."</td>";
                     echo "<td>".$row['Accessories']."</td>";
                     echo "<td>".$row['Quantity']."</td>";
-                    echo "<td><a href='delete-order.php?sid=".$row['uid']."'>Delete</a></td>";
+                    echo "<td><a href='deleteOrder.php?sid=".$row['uid']."'>Delete</a></td>";
+                    echo "<td><a href='editingorder.php?sid=".$row['uid']."'>Edit</a></td>";
                     echo "</tr>";
                 }
             } else {
-                echo "<tr><td colspan='6'>No records found</td></tr>";
+                echo "<tr><td colspan='7'>No records found</td></tr>";
             }
 
             $connection->close();
