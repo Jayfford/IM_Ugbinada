@@ -1,4 +1,5 @@
-<?php
+
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sid = $_POST['sid'];
     $fname = $_POST['System-unit-parts'];

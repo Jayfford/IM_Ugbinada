@@ -7,7 +7,8 @@
     </head>
     <body>
 <?php
-    $uid = $_GET['uid'];
+    if (isset($_GET['uid'])) 
+        $uid = $_GET['uid'];
     
     $connection = mysqli_connect("localhost", "root", "", "sisdb_ugbinada");  
     if (!$connection) {

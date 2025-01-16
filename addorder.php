@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $fn = $_POST['System-unit-parts'];
+    $fn = $_POST['System_unit_parts'];
     $ln = $_POST['Monitor'];
     $crs = $_POST['Accessories'];
     $yr = $_POST['Quantity'];
@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         die("ERROR: Could not connect. " . mysqli_connect_error());
     }
            
-    $sql = "INSERT INTO student (`System-unit-parts`, `Monitor`, `Accessories`, `Quantity`) VALUES (?, ?, ?, ?)";
+    $sql = "INSERT INTO student (`System_unit_parts`, `Monitor`, `Accessories`, `Quantity`) VALUES (?, ?, ?, ?)";
     $stmt = $connection->prepare($sql);
     $stmt->bind_param("sssi", $fn, $ln, $crs, $yr);
 

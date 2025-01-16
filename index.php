@@ -6,8 +6,8 @@
         <link href="style.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <form action="addstudent.php" method="post">
-            <input type="text" id="System-unit-parts" placeholder="System unit parts" name="System unit parts" required>
+        <form action="addorder.php" method="post">
+            <input type="text" id="System_unit_parts" placeholder="System unit parts" name="System unit parts" required>
             <input type="text" id="Monitor" placeholder="Monitor" name="Monitor" required>
             <input type="text" id="Accessories" placeholder="Accessories" name="Accessories" required>
             <input type="number" id="Quantity" placeholder="Quantity" name="Quantity" required>
@@ -38,7 +38,7 @@
                 while($row = mysqli_fetch_assoc($result)){
                     echo "<tr>";
                     echo "<td>".$row['uid']."</td>";
-                    echo "<td>".$row['System-unit-parts']."</td>";
+                    echo "<td>".$row['System_unit_parts']."</td>";
                     echo "<td>".$row['Monitor']."</td>";
                     echo "<td>".$row['Accessories']."</td>";
                     echo "<td>".$row['Quantity']."</td>";
