@@ -64,10 +64,11 @@ th{
     padding: .5em;
 }
 .btn{
-    background-color: #ffcccc;
+    background-color: #574e4e;
     color: #686464;
     padding: .3em;
     margin: .1em;
+    border: 1px solid #686464;
    
 }
 .btn:hover{

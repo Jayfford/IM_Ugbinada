@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Edit Order</title>
+        <title>Change Order</title>
         <link href="style.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
@@ -15,7 +15,7 @@
         die("Connection failed: " . mysqli_connect_error());
     }
 
-    $sql = "SELECT * FROM student WHERE uid=$uid";
+    $sql = "SELECT * FROM student WHERE uid=uid";
     $result = $connection->query($sql);
 
     if ($result && mysqli_num_rows($result) > 0) {
@@ -24,10 +24,10 @@
         die("No records found for uid: $uid");
     }
 ?>
-        <form action="editingorder.php" method="POST">
+        <form action="changeOrder.php" method="POST">
             <input type="hidden" id="uid" name="uid" value="<?php echo $row['uid'];?>">
             <label for="System unit parts">System unit parts</label>
-            <input type="text" id="System unit parts" name="System unit parts" placeholder="System unot parts" value="<?php echo $row['System unit parts']; ?>">
+            <input type="text" id="System_unit_parts" name="System_unit_parts" placeholder="System_unit_parts" value="<?php echo $row['System_unit_parts']; ?>">
             <label for="Accessories">Accessories</label>
             <input type="text" id="Accessories" name="Accessories" placeholder="Accessories name" value="<?php echo $row['Accessories']; ?>">
             <label for="Monitor">Monitor</label>

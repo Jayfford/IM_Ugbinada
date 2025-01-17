@@ -43,7 +43,7 @@
                     echo "<td>".$row['Accessories']."</td>";
                     echo "<td>".$row['Quantity']."</td>";
                     echo "<td><a href='deleteOrder.php?sid=".$row['uid']."'>Delete</a></td>";
-                    echo "<td><a href='editingorder.php?sid=".$row['uid']."'>Edit</a></td>";
+                    echo "<td><a href='changeOrder.php?sid=".$row['uid']."'>Change</a></td>";
                     echo "</tr>";
                 }
             } else {
