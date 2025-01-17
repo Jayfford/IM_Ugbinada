@@ -16,13 +16,13 @@ form{
     padding: 15px;
     text-align: center;
     width: 250px;
-    border-radius: 5px;
+    border-radius: 1px;
     box-shadow: 2px 2px 5px 0px #6e6969;
 }
 table{
     background-color: #ffffff;
     color: #635f5f;
-    padding: 15px;
+    padding: 1px;
     margin: 10px auto;
     width: 80%;
     border-collapse: collapse;
@@ -63,14 +63,18 @@ td{
 th{
     padding: .5em;
 }
+
 .btn{
+    <style>
     background-color: #574e4e;
     color: #686464;
     padding: .3em;
     margin: .1em;
     border: 1px solid #686464;
-   
+</style>
 }
+
+
 .btn:hover{
     background-color: #686464;
     color: #b3acac;
